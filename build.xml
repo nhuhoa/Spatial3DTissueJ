@@ -43,10 +43,10 @@
     For list of available properties check the imported 
     nbproject/build-impl.xml file. 
 
-
+    Oh man!!! 	
     Another way to customize the build is by overriding existing main targets.
     The targets of interest are: 
-
+      	
       -init-macrodef-javac:     defines macro for javac compilation
       -init-macrodef-junit:     defines macro for junit execution
       -init-macrodef-debug:     defines macro for class debugging
