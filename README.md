@@ -16,5 +16,5 @@ TRAN THI NHU Hoa, ARROJO E DRIGO Rafael, BERGGREN Per-Olof, and BOUDIER Thomas<b
 Image and Pervasive Access Lab<br>
 Email: hoa.tran_thi_nhu@etu.upmc.fr or thomas.boudier@upmc.fr<br> </p>
 
-A wiki documentation for this toolbox is at: 
+A wiki documentation for this toolbox is at: <br>
 https://imagejdocu.tudor.lu/plugin/3d/tissue_organization_toolbox/start
