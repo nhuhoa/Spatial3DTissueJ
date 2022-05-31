@@ -14,7 +14,7 @@ applied to the study of the islets of Langerhans”.(Scientific Reports)<br>
 http://www.nature.com/articles/srep44261<br>
 TRAN THI NHU Hoa, ARROJO E DRIGO Rafael, BERGGREN Per-Olof, and BOUDIER Thomas<br>
 Image and Pervasive Access Lab<br>
-Email: hoa.tran_thi_nhu@etu.upmc.fr or thomas.boudier@upmc.fr<br> </p>
+Email: htran@bccrc.ca or thomas.boudier@upmc.fr<br> </p>
 
 A wiki documentation for this toolbox is at: <br>
-https://imagejdocu.tudor.lu/plugin/3d/tissue_organization_toolbox/start
+[https://imagejdocu.tudor.lu/plugin/3d/tissue_organization_toolbox/start](https://imagejdocu.list.lu/doku.php?id=plugin:3d:tissue_organization_toolbox:start)
