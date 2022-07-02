@@ -1,0 +1,137 @@
+//dir=getDirectory("mouse");
+//print(dir)
+setBatchMode(true);
+print("___________________________________________");
+
+suffixe=".tif"; // change this setting if your image ends with .tiff
+dir = getArgument;
+//dir = "myIMCdir/XP1487/testing/XP1487_IMCpipeline/raw/";  // for testing purpose
+if (dir=="") 
+	exit ("No argument!");
+
+print("Working dir: "+dir+"\n");
+main_dir=File.getParent(dir)+"/";
+print("Main dir: "+main_dir+"\n");
+
+results_dir=main_dir+"results/";
+if(!File.exists(results_dir)) 
+      File.mkdir(results_dir);
+marker_dir=results_dir+"BIN/";
+if(!File.exists(marker_dir)) 
+      File.mkdir(marker_dir);
+
+
+function AutoThresholdDark () {
+	//setOption("BlackBackground", false);
+	partofHisto=0;histo1=0;
+	run("Select None");imageinit = getImageID();
+	depth=bitDepth;
+	run("Duplicate...", "title=AutoThreshold");
+	workimage = getImageID();
+	run("Enhance Contrast", "saturated=0.35");
+	if (depth > 8) {run("8-bit");}
+	run("Grays");
+	resetThreshold();
+	setOption("ScaleConversions", true);
+
+
+	// get the auto threshold values
+	//setAutoThreshold(); //Default method
+	setAutoThreshold("Otsu dark"); //Using Otsu method here
+	getThreshold(lower, upper );
+	print("\\Clear");
+	resetThreshold();
+	// analyse of the histogram:
+	getStatistics(area, mean, min, max, std, histogram);
+	vol=newArray(3);
+	vol[0]=volumeHisto (histogram,min,lower);
+	vol[1]=volumeHisto (histogram,lower,upper);
+	vol[2]=volumeHisto (histogram,upper,max);
+	//print("\"Volume\" 1 between min (" + min + ") and lower ("+ lower +") = "+ vol[0]);
+	//print("\"Volume\" 2 between lower (" + lower + ") and upper ("+ upper +") = "+ vol[1]);
+	//print("\"Volume\" 3 between upper (" + upper + ") and max ("+ max +") = "+ vol[2]);
+	maxvol=maxOf(vol[1], vol[2]);
+	for (a=1; a<3; a++) {if (maxvol == vol[a]) partofHisto = a;}
+	if (partofHisto == 1) histo1=lower;
+	if (partofHisto == 2) histo1=upper;
+   	setThreshold(histo1, max,"black & white");
+	//print("Black (dark pixels) obtained by thresholding between " + histo1 +" and " + max);
+	print("Objects obtained by thresholding between " + histo1 +" and " + max);
+	run("Convert to Mask"); 
+	//run("Invert");
+	run("Grays");
+	mask1 = getTitle;
+}
+
+function volumeHisto (histo,mini,maxi) {
+
+	volhisto=0;
+	if ((maxi-mini) > 0) {
+		for (i=mini; i<= maxi; i++) {
+			volhisto=volhisto +(i* histo[i]);
+		}
+	}
+	return volhisto;
+}
+
+
+//print("Creating results dir: "+results_dir+"\n");
+//print("Creating binarization folder for marker results: "+marker_dir+"\n");
+
+files=getFileList(dir);
+
+print("Nb of input files in the folder: "+files.length+"\n");
+
+for(f=0;f<files.length;f++)
+{
+     if(!File.isDirectory(dir+files[f])) {
+				name=files[f];
+				// NUC image ends with NUC.tif or NUC.tiff, markers image file name do not end with NUC.tif
+				if(!endsWith(name,'NUC'+suffixe) && endsWith(name,suffixe)){
+				
+					short_name = substring(name,0,lastIndexOf(name,suffixe));  // TO DO: cut suffixe instead of using indexOf function here, issue raised when there are 2 '.tif' words in a file name					
+					print("_______________________________________\n");
+					print(name);
+					print(short_name);
+          start = getTime();
+					print("Loading image: "+name);
+					open(dir+name);
+					run("Enhance Contrast", "saturated=0.35");
+					if (bitDepth > 8) {run("8-bit");}
+					run("Mean...", "radius=3");
+					run("Duplicate...", "title=["+ short_name +"_raw]");
+					
+					selectWindow(name);
+          //setBatchMode(true);
+	        AutoThresholdDark ();
+	        //setBatchMode("exit and display");
+					selectWindow("AutoThreshold");
+				 	saveAs("Tiff",marker_dir+short_name+"_BIN.tif");	
+				 	
+					run("3D Draw Rois", "raw="+short_name+"_raw seg="+short_name+"_BIN");
+					saveAs("Tiff", marker_dir+short_name+"_BIN_demo_only.tif");
+					print("Done!");
+					run("Close All"); 
+          print("Time of execution is: "+(getTime()-start)/1000+" seconds"); 
+					
+					
+           }
+           
+    }
+
+}
+
+print("Binarizared marker images results are saved into folder: "+marker_dir+"\n");
+
+print("Hura, completed!!!");
+
+//if(!File.exists(dir+"log")) File.mkdir(dir+"log");
+//selectWindow("Log");
+//saveAs("Text", dir+ "segment_log.txt");
+setBatchMode(false);
+
+
+
+
+
+

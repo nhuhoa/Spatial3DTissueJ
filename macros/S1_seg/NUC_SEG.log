@@ -1,0 +1,292 @@
+__________________________________
+
+Input directory is: 
+
+/Users/hoatran/Documents/BCCRC_projects/IMC/XP1487/testing/XP1487_IMCpipeline/raw/220202_Cambridge_142309_PreStained_s0_a1_ac.ome_rawdata_NUC//
+Segment images 
+
+./execute_segmentation.sh: line 45: /Applications/ImageJ.appjava/macosx/adoptopenjdk-8.jdk/jre/Contents/Home/bin/java: No such file or directory
+Nucleus Segmentation Completed!
+__________________________________
+
+
+Input directory is: 
+
+/Users/hoatran/Documents/BCCRC_projects/IMC/XP1487/testing/XP1487_IMCpipeline/raw/220202_Cambridge_142309_PreStained_s0_a1_ac.ome_rawdata_NUC//
+Segment images 
+
+./execute_segmentation.sh: line 45: /Applications/ImageJ.appjava/macosx/adoptopenjdk-8.jdk/jre/Contents/Home/bin/java: No such file or directory
+Nucleus Segmentation Completed!
+__________________________________
+
+__________________________________
+
+Input directory is: 
+
+/Users/hoatran/Documents/BCCRC_projects/IMC/XP1487/testing/XP1487_IMCpipeline/raw/220202_Cambridge_142309_PreStained_s0_a1_ac.ome_rawdata_NUC//
+Segment images 
+
+___________________________________________
+Working dir: /Users/hoatran/Documents/BCCRC_projects/IMC/XP1487/testing/XP1487_IMCpipeline/raw/220202_Cambridge_142309_PreStained_s0_a1_ac.ome_rawdata_NUC//
+
+Main dir: /Users/hoatran/Documents/BCCRC_projects/IMC/XP1487/testing/XP1487_IMCpipeline/raw/
+
+Creating results dir: /Users/hoatran/Documents/BCCRC_projects/IMC/XP1487/testing/XP1487_IMCpipeline/raw/results/
+
+Creating segmentation folder: /Users/hoatran/Documents/BCCRC_projects/IMC/XP1487/testing/XP1487_IMCpipeline/raw/results/SEG/
+
+NUC.tif
+7
+_______________________________________
+
+N18_NUC.tif
+N18_NUC
+Loading image: N18_NUC.tif
+N18_NUC.tif:   max:   0  min: 0  mean: 0  area: 640000  std:0
+******* Background image, low intensity, please verify your input image
+NUC.tif
+7
+_______________________________________
+
+N19_NUC.tif
+N19_NUC
+Loading image: N19_NUC.tif
+N19_NUC.tif:   max:   0  min: 0  mean: 0  area: 640000  std:0
+******* Background image, low intensity, please verify your input image
+Segmented nuc images results are saved into folder: /Users/hoatran/Documents/BCCRC_projects/IMC/XP1487/testing/XP1487_IMCpipeline/raw/results/SEG/
+
+Hura, completed!!!
+Nucleus Segmentation Completed!
+__________________________________
+
+N19_NUC
+Loading image: N19_NUC.tif
+N19_NUC.tif:   max:   0  min: 0  mean: 0  area: 640000  std:0
+******* Background image, low intensity, please verify your input image
+Segmented nuc images results are saved into folder: /Users/hoatran/Documents/BCCRC_projects/IMC/XP1487/testing/XP1487_IMCpipeline/raw/results/SEG/
+
+Hura, completed!!!
+Nucleus Segmentation Completed!
+__________________________________
+
+__________________________________
+
+Input directory is: 
+
+/Users/hoatran/Documents/BCCRC_projects/IMC/XP1487/testing/XP1487_IMCpipeline/raw/220202_Cambridge_142309_PreStained_s0_a1_ac.ome_rawdata_NUC//
+Segment images 
+
+___________________________________________
+Working dir: /Users/hoatran/Documents/BCCRC_projects/IMC/XP1487/testing/XP1487_IMCpipeline/raw/220202_Cambridge_142309_PreStained_s0_a1_ac.ome_rawdata_NUC//
+
+Main dir: /Users/hoatran/Documents/BCCRC_projects/IMC/XP1487/testing/XP1487_IMCpipeline/raw/
+
+Creating results dir: /Users/hoatran/Documents/BCCRC_projects/IMC/XP1487/testing/XP1487_IMCpipeline/raw/results/
+
+Creating segmentation folder: /Users/hoatran/Documents/BCCRC_projects/IMC/XP1487/testing/XP1487_IMCpipeline/raw/results/SEG/
+
+NUC.tif
+7
+_______________________________________
+
+N18_NUC.tif
+N18_NUC
+Loading image: N18_NUC.tif
+N18_NUC.tif:   max:   0  min: 0  mean: 0  area: 640000  std:0
+******* Background image, low intensity, please verify your input image
+NUC.tif
+7
+_______________________________________
+
+N19_NUC.tif
+N19_NUC
+Loading image: N19_NUC.tif
+N19_NUC.tif:   max:   0  min: 0  mean: 0  area: 640000  std:0
+******* Background image, low intensity, please verify your input image
+Segmented nuc images results are saved into folder: /Users/hoatran/Documents/BCCRC_projects/IMC/XP1487/testing/XP1487_IMCpipeline/raw/results/SEG/
+
+Hura, completed!!!
+Nucleus Segmentation Completed!
+__________________________________
+
+N19_NUC
+Loading image: N19_NUC.tif
+N19_NUC.tif:   max:   0  min: 0  mean: 0  area: 640000  std:0
+******* Background image, low intensity, please verify your input image
+Segmented nuc images results are saved into folder: /Users/hoatran/Documents/BCCRC_projects/IMC/XP1487/testing/XP1487_IMCpipeline/raw/results/SEG/
+
+Hura, completed!!!
+Nucleus Segmentation Completed!
+__________________________________
+
+__________________________________
+
+Input directory is: 
+
+/Users/hoatran/Documents/BCCRC_projects/IMC/XP1487/testing/XP1487_IMCpipeline/raw/220202_Cambridge_142309_PreStained_s0_a1_ac.ome_rawdata_NUC//
+Segment images 
+
+___________________________________________
+Working dir: /Users/hoatran/Documents/BCCRC_projects/IMC/XP1487/testing/XP1487_IMCpipeline/raw/220202_Cambridge_142309_PreStained_s0_a1_ac.ome_rawdata_NUC//
+
+Main dir: /Users/hoatran/Documents/BCCRC_projects/IMC/XP1487/testing/XP1487_IMCpipeline/raw/
+
+Creating results dir: /Users/hoatran/Documents/BCCRC_projects/IMC/XP1487/testing/XP1487_IMCpipeline/raw/results/
+
+Creating segmentation folder: /Users/hoatran/Documents/BCCRC_projects/IMC/XP1487/testing/XP1487_IMCpipeline/raw/results/SEG/
+
+NUC.tif
+7
+_______________________________________
+
+N18_NUC.tif
+N18_NUC
+Loading image: N18_NUC.tif
+Warning: the fonts "Times" and "Times" are not available for the Java logical font "Serif", which may have unexpected appearance or behavior. Re-enable the "Times" font to remove this warning.
+Nucleus Segmentation Completed!
+__________________________________
+
+7
+_______________________________________
+
+N18_NUC.tif
+N18_NUC
+Loading image: N18_NUC.tif
+Warning: the fonts "Times" and "Times" are not available for the Java logical font "Serif", which may have unexpected appearance or behavior. Re-enable the "Times" font to remove this warning.
+Nucleus Segmentation Completed!
+__________________________________
+
+__________________________________
+
+Input directory is: 
+
+/Users/hoatran/Documents/BCCRC_projects/IMC/XP1487/testing/XP1487_IMCpipeline/raw/220202_Cambridge_142309_PreStained_s0_a1_ac.ome_rawdata_NUC//
+Segment images 
+
+___________________________________________
+Working dir: /Users/hoatran/Documents/BCCRC_projects/IMC/XP1487/testing/XP1487_IMCpipeline/raw/220202_Cambridge_142309_PreStained_s0_a1_ac.ome_rawdata_NUC//
+
+Main dir: /Users/hoatran/Documents/BCCRC_projects/IMC/XP1487/testing/XP1487_IMCpipeline/raw/
+
+Creating results dir: /Users/hoatran/Documents/BCCRC_projects/IMC/XP1487/testing/XP1487_IMCpipeline/raw/results/
+
+Creating segmentation folder: /Users/hoatran/Documents/BCCRC_projects/IMC/XP1487/testing/XP1487_IMCpipeline/raw/results/SEG/
+
+NUC.tif
+7
+_______________________________________
+
+N18_NUC.tif
+N18_NUC
+Loading image: N18_NUC.tif
+N18_NUC.tif:   max:   0  min: 0  mean: 0  area: 640000  std:0
+******* Background image, low intensity, please verify your input image
+NUC.tif
+7
+_______________________________________
+
+N19_NUC.tif
+N19_NUC
+Loading image: N19_NUC.tif
+N19_NUC.tif:   max:   0  min: 0  mean: 0  area: 640000  std:0
+******* Background image, low intensity, please verify your input image
+Segmented nuc images results are saved into folder: /Users/hoatran/Documents/BCCRC_projects/IMC/XP1487/testing/XP1487_IMCpipeline/raw/results/SEG/
+
+Hura, completed!!!
+Nucleus Segmentation Completed!
+__________________________________
+
+N19_NUC
+Loading image: N19_NUC.tif
+N19_NUC.tif:   max:   0  min: 0  mean: 0  area: 640000  std:0
+******* Background image, low intensity, please verify your input image
+Segmented nuc images results are saved into folder: /Users/hoatran/Documents/BCCRC_projects/IMC/XP1487/testing/XP1487_IMCpipeline/raw/results/SEG/
+
+Hura, completed!!!
+Nucleus Segmentation Completed!
+__________________________________
+
+__________________________________
+
+Input directory is: 
+
+/Users/hoatran/Documents/BCCRC_projects/IMC/XP1487/testing/XP1487_IMCpipeline/raw/220202_Cambridge_142309_PreStained_s0_a1_ac.ome_rawdata_NUC//
+Segment images 
+
+___________________________________________
+Working dir: /Users/hoatran/Documents/BCCRC_projects/IMC/XP1487/testing/XP1487_IMCpipeline/raw/220202_Cambridge_142309_PreStained_s0_a1_ac.ome_rawdata_NUC//
+
+Main dir: /Users/hoatran/Documents/BCCRC_projects/IMC/XP1487/testing/XP1487_IMCpipeline/raw/
+
+Creating results dir: /Users/hoatran/Documents/BCCRC_projects/IMC/XP1487/testing/XP1487_IMCpipeline/raw/results/
+
+Creating segmentation folder: /Users/hoatran/Documents/BCCRC_projects/IMC/XP1487/testing/XP1487_IMCpipeline/raw/results/SEG/
+
+NUC.tif
+7
+_______________________________________
+
+N18_NUC.tif
+N18_NUC
+Loading image: N18_NUC.tif
+N18_NUC.tif:   max:   255  min: 0  mean: 63.8141  area: 640000  std:42.0434
+Segmenting...
+N18_NUC.tif  mean value: 22341.8279
+_________________________________________
+ATTENTION: seeds threshold value is:  22841
+3D spots segmentation
+Initial.....
+Spot segmentation.....
+Labelling 
+Watershed...
+
+\Update:Voxels to process : 64557
+\Update:Voxels to process : 100444
+\Update:Voxels to process : 113462
+\Update:Voxels to process : 84065
+\Update:Voxels to process : 32852
+\Update:Voxels to process : 0
+Watershed completed.
+Spot Image: N18_NUC   Seed Image : Image
+Vol min: 15   Vol max: 1000000
+Number of labelled objects: 2765
+Create label image with 2765 objects
+Finished
+Finished
+Time of execution is: 6.468 seconds
+NUC.tif
+7
+_______________________________________
+
+N19_NUC.tif
+N19_NUC
+Loading image: N19_NUC.tif
+N19_NUC.tif:   max:   255  min: 0  mean: 63.4188  area: 640000  std:41.4679
+Segmenting...
+N19_NUC.tif  mean value: 21801.0477
+_________________________________________
+ATTENTION: seeds threshold value is:  22301
+3D spots segmentation
+Initial.....
+Spot segmentation.....
+Labelling 
+Watershed...
+
+\Update:Voxels to process : 101998
+\Update:Voxels to process : 108473
+\Update:Voxels to process : 92192
+\Update:Voxels to process : 0
+Watershed completed.
+Spot Image: N19_NUC   Seed Image : Image
+Vol min: 15   Vol max: 1000000
+Number of labelled objects: 2750
+Create label image with 2750 objects
+Finished
+Finished
+Time of execution is: 5.406 seconds
+Segmented nuc images results are saved into folder: /Users/hoatran/Documents/BCCRC_projects/IMC/XP1487/testing/XP1487_IMCpipeline/raw/results/SEG/
+
+Hura, completed!!!
+Nucleus Segmentation Completed!
+__________________________________
+

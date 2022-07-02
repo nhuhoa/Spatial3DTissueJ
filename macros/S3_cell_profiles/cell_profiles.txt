@@ -1,0 +1,70 @@
+//dir=getDirectory("mouse");
+//print(dir)
+setBatchMode(true);
+print("___________________________________________");
+
+
+dir = getArgument;
+if (dir=="") 
+	exit ("No argument!");
+
+print("Working dir: "+dir+"\n");
+main_dir=File.getParent(dir)+"/";
+print("Main dir: "+main_dir+"\n");
+
+results_dir=main_dir+"results/";
+if(!File.exists(results_dir)) 
+      IJ.error("Double check main results input folder");
+seg_dir=results_dir+"SEG/";
+if(!File.exists(seg_dir)) 
+      IJ.error("Double check nuc seg results input folder");
+
+bin_dir=results_dir+"BIN/";
+if(!File.exists(bin_dir)) 
+      IJ.error("Double check binarization results input folder");
+
+raw_channel_dir=dir+"_CHANNELS/";
+if(!File.exists(raw_channel_dir)) 
+      IJ.error("Double check raw channels input folder");
+
+save_dir=results_dir+"CELL_PROFILES/";
+if(!File.exists(save_dir)) 
+    File.mkdir(save_dir);
+    
+IJ.log("raw_channel_dir: "+raw_channel_dir);
+IJ.log("results_dir: "+results_dir);
+IJ.log("seg_dir: "+seg_dir);
+IJ.log("bin_dir: "+bin_dir);
+IJ.log("Creating a results folder: "+save_dir);
+
+
+run("Image Sequence...", "dir="+bin_dir+" type=16-bit filter=_BIN.tif sort use");
+run("8-bit");
+//saveAs("Tiff", save_dir+"BIN.tif");
+rename("BIN");
+
+run("Image Sequence...", "dir="+raw_channel_dir+" type=default filter=.tif sort use");
+//saveAs("Tiff", save_dir+"FILTERED.tif");
+rename("FILTERED");
+open(seg_dir+"N18_NUC_SEG.tif");
+
+run("CELL PROFILES", "save="+save_dir+" nuc=N18_NUC_SEG.tif filtered=FILTERED binary=BIN percent_marker=0.2 save_0");
+run("Close All"); 
+
+File.delete(save_dir+"N18_NUC_SEG_WAT.tif"); // a duplicated file, need to check the code
+
+
+print("Cell profile results are saved into folder: "+save_dir+"\n");
+print("Hura, completed!!!");
+
+
+//if(!File.exists(dir+"log")) File.mkdir(dir+"log");
+//selectWindow("Log");
+//saveAs("Text", dir+ "segment_log.txt");
+setBatchMode(false);
+
+
+
+
+
+

@@ -1,0 +1,270 @@
+__________________________________
+
+Input directory is: 
+
+/Users/hoatran/Documents/BCCRC_projects/IMC/XP1487/testing/XP1487_IMCpipeline/raw/220202_Cambridge_142309_PreStained_s0_a1_ac.ome_rawdata
+Cell profiles estimation... 
+
+___________________________________________
+Working dir: /Users/hoatran/Documents/BCCRC_projects/IMC/XP1487/testing/XP1487_IMCpipeline/raw/220202_Cambridge_142309_PreStained_s0_a1_ac.ome_rawdata
+
+Main dir: /Users/hoatran/Documents/BCCRC_projects/IMC/XP1487/testing/XP1487_IMCpipeline/raw/
+
+raw_channel_dir: /Users/hoatran/Documents/BCCRC_projects/IMC/XP1487/testing/XP1487_IMCpipeline/raw/220202_Cambridge_142309_PreStained_s0_a1_ac.ome_rawdata_CHANNELS
+results_dir: /Users/hoatran/Documents/BCCRC_projects/IMC/XP1487/testing/XP1487_IMCpipeline/raw/results/
+seg_dir: /Users/hoatran/Documents/BCCRC_projects/IMC/XP1487/testing/XP1487_IMCpipeline/raw/results/SEG/
+bin_dir: /Users/hoatran/Documents/BCCRC_projects/IMC/XP1487/testing/XP1487_IMCpipeline/raw/results/BIN/
+Cell profile results are saved into folder: /Users/hoatran/Documents/BCCRC_projects/IMC/XP1487/testing/XP1487_IMCpipeline/raw/results/SEG/
+
+Hura, completed!!!
+Cell Profiles Estimation Completed!
+__________________________________
+
+raw_channel_dir: /Users/hoatran/Documents/BCCRC_projects/IMC/XP1487/testing/XP1487_IMCpipeline/raw/220202_Cambridge_142309_PreStained_s0_a1_ac.ome_rawdata_CHANNELS
+results_dir: /Users/hoatran/Documents/BCCRC_projects/IMC/XP1487/testing/XP1487_IMCpipeline/raw/results/
+seg_dir: /Users/hoatran/Documents/BCCRC_projects/IMC/XP1487/testing/XP1487_IMCpipeline/raw/results/SEG/
+bin_dir: /Users/hoatran/Documents/BCCRC_projects/IMC/XP1487/testing/XP1487_IMCpipeline/raw/results/BIN/
+Cell profile results are saved into folder: /Users/hoatran/Documents/BCCRC_projects/IMC/XP1487/testing/XP1487_IMCpipeline/raw/results/SEG/
+
+Hura, completed!!!
+Cell Profiles Estimation Completed!
+__________________________________
+
+__________________________________
+
+Input directory is: 
+
+/Users/hoatran/Documents/BCCRC_projects/IMC/XP1487/testing/XP1487_IMCpipeline/raw/220202_Cambridge_142309_PreStained_s0_a1_ac.ome_rawdata
+Cell profiles estimation... 
+
+___________________________________________
+Working dir: /Users/hoatran/Documents/BCCRC_projects/IMC/XP1487/testing/XP1487_IMCpipeline/raw/220202_Cambridge_142309_PreStained_s0_a1_ac.ome_rawdata
+
+Main dir: /Users/hoatran/Documents/BCCRC_projects/IMC/XP1487/testing/XP1487_IMCpipeline/raw/
+
+raw_channel_dir: /Users/hoatran/Documents/BCCRC_projects/IMC/XP1487/testing/XP1487_IMCpipeline/raw/220202_Cambridge_142309_PreStained_s0_a1_ac.ome_rawdata_CHANNELS/
+results_dir: /Users/hoatran/Documents/BCCRC_projects/IMC/XP1487/testing/XP1487_IMCpipeline/raw/results/
+seg_dir: /Users/hoatran/Documents/BCCRC_projects/IMC/XP1487/testing/XP1487_IMCpipeline/raw/results/SEG/
+bin_dir: /Users/hoatran/Documents/BCCRC_projects/IMC/XP1487/testing/XP1487_IMCpipeline/raw/results/BIN/
+Creating a results folder: /Users/hoatran/Documents/BCCRC_projects/IMC/XP1487/testing/XP1487_IMCpipeline/raw/results/CELL_PROFILES/
+Current working directory: /Users/miu/Documents/workspace/projects_BCCRC/IMC/XP1487_IMCpipeline/results/
+DEBUG is: /Users/miu/Documents/workspace/projects_BCCRC/IMC/XP1487_IMCpipeline/results/BIN/
+DEBUG is: /Users/miu/Documents/workspace/projects_BCCRC/IMC/XP1487_IMCpipeline/results/FILTERED/
+Watershed radius is: 3.0
+Seg: N18_NUC_SEG
+Filtered markers images: FILTERED.tif
+Binary images: BIN.tif
+Input filtered images: C04.tif
+Input filtered images: C05.tif
+Input filtered images: C06.tif
+Input filtered images: C07.tif
+Input filtered images: C08.tif
+Input filtered images: C09.tif
+Input filtered images: C10.tif
+Input filtered images: C11.tif
+Input filtered images: C12.tif
+Input filtered images: C13.tif
+Input filtered images: C14.tif
+Input filtered images: C15.tif
+Input filtered images: C16.tif
+DEBUG FILTER SIZE13
+DEBUG BIN SIZE13
+N18_NUC
+Generate watershed cell segmentation image using radius from nucleus: 3.0
+Watershed radius: 3.0
+Computing watershed, cell region detection
+Computing EDT
+Computing Watershed
+Watershed...
+Setting minimum for raw image to 1.0
+
+\Update:Voxels to process : 110227
+\Update:Voxels to process : 63176
+\Update:Voxels to process : 0
+Watershed completed.
+Computing Voronoi
+Save the result as N18_NUC_SEG_WAT
+Number of cells is: 2764
+Eastimating cell profiles ...
+N18_NUC
+Nb images bin is: 13
+Nb images raw is: 13
+Computing cell type...
+Nb cells is: 2764
+/Users/hoatran/Documents/BCCRC_projects/IMC/XP1487/testing/XP1487_IMCpipeline/raw/results/CELL_PROFILES/N18_NUC_cell_profiles.csv
+/Users/hoatran/Documents/BCCRC_projects/IMC/XP1487/testing/XP1487_IMCpipeline/raw/results/CELL_PROFILES/N18_NUC_cells_interaction_network.csv
+Completed
+====================================================================
+
+Cell profile results are saved into folder: /Users/hoatran/Documents/BCCRC_projects/IMC/XP1487/testing/XP1487_IMCpipeline/raw/results/CELL_PROFILES/
+
+Hura, completed!!!
+Cell Profiles Estimation Completed!
+__________________________________
+
+/Users/hoatran/Documents/BCCRC_projects/IMC/XP1487/testing/XP1487_IMCpipeline/raw/results/CELL_PROFILES/N18_NUC_cells_interaction_network.csv
+Completed
+====================================================================
+
+Cell profile results are saved into folder: /Users/hoatran/Documents/BCCRC_projects/IMC/XP1487/testing/XP1487_IMCpipeline/raw/results/CELL_PROFILES/
+
+Hura, completed!!!
+Cell Profiles Estimation Completed!
+__________________________________
+
+__________________________________
+
+Input directory is: 
+
+/Users/hoatran/Documents/BCCRC_projects/IMC/XP1487/testing/XP1487_IMCpipeline/raw/220202_Cambridge_142309_PreStained_s0_a1_ac.ome_rawdata
+Cell profiles estimation... 
+
+___________________________________________
+Working dir: /Users/hoatran/Documents/BCCRC_projects/IMC/XP1487/testing/XP1487_IMCpipeline/raw/220202_Cambridge_142309_PreStained_s0_a1_ac.ome_rawdata
+
+Main dir: /Users/hoatran/Documents/BCCRC_projects/IMC/XP1487/testing/XP1487_IMCpipeline/raw/
+
+raw_channel_dir: /Users/hoatran/Documents/BCCRC_projects/IMC/XP1487/testing/XP1487_IMCpipeline/raw/220202_Cambridge_142309_PreStained_s0_a1_ac.ome_rawdata_CHANNELS/
+results_dir: /Users/hoatran/Documents/BCCRC_projects/IMC/XP1487/testing/XP1487_IMCpipeline/raw/results/
+seg_dir: /Users/hoatran/Documents/BCCRC_projects/IMC/XP1487/testing/XP1487_IMCpipeline/raw/results/SEG/
+bin_dir: /Users/hoatran/Documents/BCCRC_projects/IMC/XP1487/testing/XP1487_IMCpipeline/raw/results/BIN/
+Creating a results folder: /Users/hoatran/Documents/BCCRC_projects/IMC/XP1487/testing/XP1487_IMCpipeline/raw/results/CELL_PROFILES/
+Current working directory: /Users/miu/Documents/workspace/projects_BCCRC/IMC/XP1487_IMCpipeline/results/
+DEBUG is: /Users/miu/Documents/workspace/projects_BCCRC/IMC/XP1487_IMCpipeline/results/BIN/
+DEBUG is: /Users/miu/Documents/workspace/projects_BCCRC/IMC/XP1487_IMCpipeline/results/FILTERED/
+Watershed radius is: 3.0
+Seg: N18_NUC_SEG
+Filtered markers images: FILTERED
+Binary images: BIN
+Input filtered images: C04.tif
+Input filtered images: C05.tif
+Input filtered images: C06.tif
+Input filtered images: C07.tif
+Input filtered images: C08.tif
+Input filtered images: C09.tif
+Input filtered images: C10.tif
+Input filtered images: C11.tif
+Input filtered images: C12.tif
+Input filtered images: C13.tif
+Input filtered images: C14.tif
+Input filtered images: C15.tif
+Input filtered images: C16.tif
+DEBUG FILTER SIZE13
+DEBUG BIN SIZE13
+N18_NUC
+Generate watershed cell segmentation image using radius from nucleus: 3.0
+Watershed radius: 3.0
+Computing watershed, cell region detection
+Computing EDT
+Computing Watershed
+Watershed...
+Setting minimum for raw image to 1.0
+
+\Update:Voxels to process : 111999
+\Update:Voxels to process : 57219
+\Update:Voxels to process : 0
+Watershed completed.
+Computing Voronoi
+Save the result as N18_NUC_SEG_WAT
+Number of cells is: 2764
+Eastimating cell profiles ...
+N18_NUC
+Nb images bin is: 13
+Nb images raw is: 13
+Computing cell type...
+Nb cells is: 2764
+/Users/hoatran/Documents/BCCRC_projects/IMC/XP1487/testing/XP1487_IMCpipeline/raw/results/CELL_PROFILES/N18_NUC_cell_profiles.csv
+/Users/hoatran/Documents/BCCRC_projects/IMC/XP1487/testing/XP1487_IMCpipeline/raw/results/CELL_PROFILES/N18_NUC_cells_interaction_network.csv
+Completed
+====================================================================
+
+1
+Cell profile results are saved into folder: /Users/hoatran/Documents/BCCRC_projects/IMC/XP1487/testing/XP1487_IMCpipeline/raw/results/CELL_PROFILES/
+
+Hura, completed!!!
+Cell Profiles Estimation Completed!
+__________________________________
+
+Completed
+====================================================================
+
+1
+Cell profile results are saved into folder: /Users/hoatran/Documents/BCCRC_projects/IMC/XP1487/testing/XP1487_IMCpipeline/raw/results/CELL_PROFILES/
+
+Hura, completed!!!
+Cell Profiles Estimation Completed!
+__________________________________
+
+__________________________________
+
+Input directory is: 
+
+/Users/hoatran/Documents/BCCRC_projects/IMC/XP1487/testing/XP1487_IMCpipeline/raw/220202_Cambridge_142309_PreStained_s0_a1_ac.ome_rawdata
+Cell profiles estimation... 
+
+___________________________________________
+Working dir: /Users/hoatran/Documents/BCCRC_projects/IMC/XP1487/testing/XP1487_IMCpipeline/raw/220202_Cambridge_142309_PreStained_s0_a1_ac.ome_rawdata
+
+Main dir: /Users/hoatran/Documents/BCCRC_projects/IMC/XP1487/testing/XP1487_IMCpipeline/raw/
+
+raw_channel_dir: /Users/hoatran/Documents/BCCRC_projects/IMC/XP1487/testing/XP1487_IMCpipeline/raw/220202_Cambridge_142309_PreStained_s0_a1_ac.ome_rawdata_CHANNELS/
+results_dir: /Users/hoatran/Documents/BCCRC_projects/IMC/XP1487/testing/XP1487_IMCpipeline/raw/results/
+seg_dir: /Users/hoatran/Documents/BCCRC_projects/IMC/XP1487/testing/XP1487_IMCpipeline/raw/results/SEG/
+bin_dir: /Users/hoatran/Documents/BCCRC_projects/IMC/XP1487/testing/XP1487_IMCpipeline/raw/results/BIN/
+Creating a results folder: /Users/hoatran/Documents/BCCRC_projects/IMC/XP1487/testing/XP1487_IMCpipeline/raw/results/CELL_PROFILES/
+Current working directory: /Users/miu/Documents/workspace/projects_BCCRC/IMC/XP1487_IMCpipeline/results/
+DEBUG is: /Users/miu/Documents/workspace/projects_BCCRC/IMC/XP1487_IMCpipeline/results/BIN/
+DEBUG is: /Users/miu/Documents/workspace/projects_BCCRC/IMC/XP1487_IMCpipeline/results/FILTERED/
+Watershed radius is: 3.0
+Seg: N18_NUC_SEG
+Filtered markers images: FILTERED
+Binary images: BIN
+Input filtered images: C04.tif
+Input filtered images: C05.tif
+Input filtered images: C06.tif
+Input filtered images: C07.tif
+Input filtered images: C08.tif
+Input filtered images: C09.tif
+Input filtered images: C10.tif
+Input filtered images: C11.tif
+Input filtered images: C12.tif
+Input filtered images: C13.tif
+Input filtered images: C14.tif
+Input filtered images: C15.tif
+Input filtered images: C16.tif
+DEBUG FILTER SIZE13
+DEBUG BIN SIZE13
+N18_NUC
+Generate watershed cell segmentation image using radius from nucleus: 3.0
+Watershed radius: 3.0
+Computing watershed, cell region detection
+Computing EDT
+Computing Watershed
+Watershed...
+Setting minimum for raw image to 1.0
+
+\Update:Voxels to process : 113003
+\Update:Voxels to process : 59126
+\Update:Voxels to process : 0
+Watershed completed.
+Computing Voronoi
+Save the result as N18_NUC_SEG_WAT
+Number of cells is: 2764
+Eastimating cell profiles ...
+N18_NUC
+Nb images bin is: 13
+Nb images raw is: 13
+Computing cell type...
+Nb cells is: 2764
+/Users/hoatran/Documents/BCCRC_projects/IMC/XP1487/testing/XP1487_IMCpipeline/raw/results/CELL_PROFILES/N18_NUC_cell_profiles.csv
+/Users/hoatran/Documents/BCCRC_projects/IMC/XP1487/testing/XP1487_IMCpipeline/raw/results/CELL_PROFILES/N18_NUC_cells_interaction_network.csv
+Completed
+====================================================================
+
+1
+Cell profile results are saved into folder: /Users/hoatran/Documents/BCCRC_projects/IMC/XP1487/testing/XP1487_IMCpipeline/raw/results/CELL_PROFILES/
+
+Hura, completed!!!
+Cell Profiles Estimation Completed!
+__________________________________
+

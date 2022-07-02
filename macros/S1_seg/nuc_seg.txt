@@ -1,0 +1,126 @@
+//dir=getDirectory("mouse");
+//print(dir)
+setBatchMode(true);
+print("___________________________________________");
+
+minSize=6; // minimum diameter
+maxSize=14; // maximum diameter
+suffixe=".tif"; // change this setting if your image ends with .tiff
+
+//spot_seeds_threshold=30000; //improved, automatic defined as below
+background_threshold=50;	// [0,255] intensity value range, if no pixel value higher than this threshold means background objects, skip all functions.
+
+dir = getArgument;
+//dir = "/Users/hoatran/Documents/BCCRC_projects/IMC/XP1487/testing/XP1487_IMCpipeline/raw/";  // for testing purpose, you can disable line above, and use this
+if (dir=="") 
+	exit ("No argument!");
+
+print("Working dir: "+dir+"\n");
+main_dir=File.getParent(dir)+"/";
+print("Main dir: "+main_dir+"\n");
+
+results_dir=main_dir+"results/";
+if(!File.exists(results_dir)) 
+      File.mkdir(results_dir);
+seg_dir=results_dir+"SEG/";
+if(!File.exists(seg_dir)) 
+      File.mkdir(seg_dir);
+
+print("Creating results dir: "+results_dir+"\n");
+print("Creating segmentation folder: "+seg_dir+"\n");
+
+files=getFileList(dir);
+
+//print("Nb of processing images: "+files.length+"\n");
+
+for(f=0;f<files.length;f++)
+{
+     if(!File.isDirectory(dir+files[f])) {
+				name=files[f];
+				// NUC image ends with NUC.tif or NUC.tiff
+				if(endsWith(name,"NUC"+suffixe)){
+					//print("Get the right channel : "+name);
+          print("NUC"+suffixe);
+          print(lastIndexOf(name,suffixe));
+					short_name = substring(name,0,lastIndexOf(name,suffixe));  // TO DO: cut suffixe instead of using indexOf function here, issue when there are 2 .tif words in file name					
+					print("_______________________________________\n");
+					print(name);
+					print(short_name);
+          start = getTime();
+					print("Loading image: "+name);
+					open(dir+name);
+					h=getHeight();
+					w=getWidth();
+					//print(' t: '+title+"   h:   "+h+"w:   "+w);
+					setOption("ScaleConversions", true);
+					selectWindow(name);
+					run("Enhance Contrast", "saturated=0.35");
+					if (bitDepth > 8) {run("8-bit");}
+					getStatistics(area, mean, min, max, std);
+					print(getTitle+":   max:   "+max+"  min: "+min+"  mean: "+mean+"  area: "+area+"  std:"+std);
+					if(max<background_threshold){
+						print("******* Background image, low intensity, please verify your input image");
+						//newImage(short_name+"_SEG", "16-bit black", w, h, 1);
+						//saveAs("Tiff",dir+"SEG/"+short_name+"_SEG.tif");	
+						run("Close All"); 
+					} else{
+					  
+			      selectWindow(name);
+					  run("Grays");
+						run("Median...", "radius=2");
+						//run("Mean...", "radius=2");
+					  //print("Band pass filtering...");
+					  selectWindow(name);
+					  //run("Duplicate...", " ");
+					  run("Duplicate...", "title=["+ short_name +"_raw]");
+					  //selectWindow(short_name+"-1.tif");
+						//rename(short_name+"_raw");
+					  selectWindow(name);
+						run("32-bit");
+			      run("Bandpass Filter...", "filter_large="+maxSize+" filter_small="+minSize+" suppress=None tolerance=5");
+						//run("Enhance Contrast...", "saturated=0");
+						run("16-bit");
+						
+						//saveAs("Tiff",dir+"FILTERED/"+"BP_"+name);
+						//open(dir+"FILTERED/"+"BP_"+name);
+						//selectWindow("BP_"+name);
+						//rename("BP_dapi");
+						selectWindow(name);
+						print("Segmenting...");
+						getStatistics(area, mean, min, max, std);
+						print(getTitle+"  mean value: "+mean);
+						sd=500;
+						spot_seeds_threshold=floor(mean)+sd;  // if you obtain too many objects, you can increase the sd value here. And in contrast, if you obtain small number of objects than you expected, you can decrease the sd value here
+						print("_________________________________________");
+						print("ATTENTION: seeds threshold value is:  "+spot_seeds_threshold);
+						// usually seeds_threshold=30000 for 16 bits image
+						run("3D Spot Segmentation", "seeds_threshold="+spot_seeds_threshold+" local_background=0 radius_0=2 radius_1=4 radius_2=6 weigth=0.50 radius_max=20 sd_value=1.90 local_threshold=[Gaussian fit] seg_spot=Block watershed volume_min=15 volume_max=1000000 seeds=Automatic spots="+short_name+" radius_for_seeds=2 output=[Label Image]"); 
+						print("Time of execution is: "+(getTime()-start)/1000+" seconds"); 
+						selectWindow("seg");
+						run("3-3-2 RGB");
+					 	saveAs("Tiff",seg_dir+short_name+"_SEG.tif");	
+					 	
+						run("3D Draw Rois", "raw="+short_name+"_raw seg="+short_name+"_SEG");
+						saveAs("Tiff", seg_dir+short_name+"_SEG_demo_only.tif");
+						run("Close All"); 
+
+					}
+					
+           }
+           
+    }
+
+}
+print("Segmented nuc images results are saved into folder: "+seg_dir+"\n");
+print("Hura, completed!!!");
+
+//if(!File.exists(dir+"log")) File.mkdir(dir+"log");
+//selectWindow("Log");
+//saveAs("Text", dir+ "segment_log.txt");
+setBatchMode(false);
+
+
+
+
+
+

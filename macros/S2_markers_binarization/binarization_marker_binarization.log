@@ -1,0 +1,146 @@
+__________________________________
+
+Input directory is: 
+
+/Users/hoatran/Documents/BCCRC_projects/IMC/XP1487/testing/XP1487_IMCpipeline/raw/220202_Cambridge_142309_PreStained_s0_a1_ac.ome_rawdata_CHANNELS/
+Marker binarization... 
+
+___________________________________________
+Working dir: /Users/hoatran/Documents/BCCRC_projects/IMC/XP1487/testing/XP1487_IMCpipeline/raw/220202_Cambridge_142309_PreStained_s0_a1_ac.ome_rawdata_CHANNELS/
+
+Main dir: /Users/hoatran/Documents/BCCRC_projects/IMC/XP1487/testing/XP1487_IMCpipeline/raw/
+
+Nb of input files in the folder: 15
+
+_______________________________________
+
+C04.tif
+C04
+Loading image: C04.tif
+\Clear
+Objects obtained by thresholding between 30 and 184
+Done!
+Time of execution is: 0.415 seconds
+_______________________________________
+
+C05.tif
+C05
+Loading image: C05.tif
+\Clear
+Objects obtained by thresholding between 24 and 152
+Done!
+Time of execution is: 0.099 seconds
+_______________________________________
+
+C06.tif
+C06
+Loading image: C06.tif
+\Clear
+Objects obtained by thresholding between 30 and 201
+Done!
+Time of execution is: 0.043 seconds
+_______________________________________
+
+C07.tif
+C07
+Loading image: C07.tif
+\Clear
+Objects obtained by thresholding between 31 and 254
+Done!
+Time of execution is: 0.033 seconds
+_______________________________________
+
+C08.tif
+C08
+Loading image: C08.tif
+\Clear
+Objects obtained by thresholding between 35 and 233
+Done!
+Time of execution is: 0.037 seconds
+_______________________________________
+
+C09.tif
+C09
+Loading image: C09.tif
+\Clear
+Objects obtained by thresholding between 28 and 216
+Done!
+Time of execution is: 0.026 seconds
+_______________________________________
+
+C10.tif
+C10
+Loading image: C10.tif
+\Clear
+Objects obtained by thresholding between 45 and 175
+Done!
+Time of execution is: 0.051 seconds
+_______________________________________
+
+C11.tif
+C11
+Loading image: C11.tif
+\Clear
+Objects obtained by thresholding between 35 and 255
+Done!
+Time of execution is: 0.027 seconds
+_______________________________________
+
+C12.tif
+C12
+Loading image: C12.tif
+\Clear
+Objects obtained by thresholding between 29 and 156
+Done!
+Time of execution is: 0.037 seconds
+_______________________________________
+
+C13.tif
+C13
+Loading image: C13.tif
+\Clear
+Objects obtained by thresholding between 35 and 129
+Done!
+Time of execution is: 0.045 seconds
+_______________________________________
+
+C14.tif
+C14
+Loading image: C14.tif
+\Clear
+Objects obtained by thresholding between 33 and 181
+Done!
+Time of execution is: 0.045 seconds
+_______________________________________
+
+C15.tif
+C15
+Loading image: C15.tif
+\Clear
+Objects obtained by thresholding between 36 and 212
+Done!
+Time of execution is: 0.023 seconds
+_______________________________________
+
+C16.tif
+C16
+Loading image: C16.tif
+\Clear
+Objects obtained by thresholding between 18 and 198
+Done!
+Time of execution is: 0.037 seconds
+_______________________________________
+
+C17.tif
+C17
+Loading image: C17.tif
+\Clear
+Objects obtained by thresholding between 6 and 63
+Done!
+Time of execution is: 0.054 seconds
+Binarizared marker images results are saved into folder: /Users/hoatran/Documents/BCCRC_projects/IMC/XP1487/testing/XP1487_IMCpipeline/raw/results/BIN/
+
+Hura, completed!!!
+Completed!
+__________________________________
+
