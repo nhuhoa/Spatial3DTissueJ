@@ -1,0 +1,67 @@
+//dir=getDirectory("mouse");
+//print(dir)
+setBatchMode(true);
+print("___________________________________________");
+
+suffixe=".tif"; // change this setting if your image ends with .tiff
+
+dir = getArgument;
+//dir=getDirectory("mouse");
+//print(dir)
+//dir = "/Users/hoatran/Documents/python_workspace/Spatial3DTissueJ/testing_images/filtered/";  // for testing purpose, you can disable line above, and use this
+if (dir=="") 
+	exit ("No argument!");
+
+print("Working dir: "+dir+"\n");
+main_dir=File.getParent(dir)+"/";
+print("Main dir: "+main_dir+"\n");
+
+seg_dir=main_dir+"SEG/";
+if(!File.exists(seg_dir)) 
+      File.mkdir(seg_dir);
+
+print("Creating segmentation folder: "+seg_dir+"\n");
+
+files=getFileList(dir);
+
+print("Nb of files in this folder: "+files.length+"\n");
+
+for(f=0;f<files.length;f++)
+{
+     if(!File.isDirectory(dir+files[f])) {
+				name=files[f];
+				// NUC image ends with dapi.tif
+				if(endsWith(name,"dapi"+suffixe)){
+					//print("Get the right channel : "+name);
+					short_name = substring(name,0,lastIndexOf(name,suffixe));  
+					
+					print("_______________________________________\n");
+					print(short_name);
+          start = getTime();
+					print("Loading image: "+name);
+					open(dir+name);
+					
+					
+						run("Close All"); 
+						print("Time of execution is: "+(getTime()-start)/1000+" seconds"); 
+
+					}
+					
+           }
+           
+    }
+
+}
+print("Segmented nuc images results are saved into folder: "+seg_dir+"\n");
+print("Hura, completed!!!");
+
+//if(!File.exists(dir+"log")) File.mkdir(dir+"log");
+//selectWindow("Log");
+//saveAs("Text", dir+ "segment_log.txt");
+setBatchMode(false);
+
+
+
+
+
+

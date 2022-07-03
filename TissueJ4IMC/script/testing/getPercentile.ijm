@@ -1,0 +1,56 @@
+// ----------------------------------------------------------------------------------------------
+// This macro calculates the 1th and 99.8th percentiles of an image histogram 
+// and normalizes it to the [0,1] range.
+// Credits:
+// - Base code from BenTupper http://imagej.1557.x6.nabble.com/Percentile-value-td3690983.html
+// - DeepImageJ team:
+// 		- Reference: DeepImageJ: A user-friendly environment to run deep learning models in ImageJ,
+// 			     E. Gómez-de-Mariscal, C. García-López-de-Haro, W. Ouyang, L. Donati, E. Lundberg, M. Unser, A. Muñoz-Barrutia, D. Sage,
+//             	             Nat Methods 18, 1192–1195 (2021). https://doi.org/10.1038/s41592-021-01262-9
+// ----------------------------------------------------------------------------------------------
+
+function percentile_normalization(){
+	nBins = 256; // the larger the more accurate
+	getHistogram(values, counts, nBins);
+	
+	//create a cumulative histogram
+	cumHist = newArray(nBins);
+	cumHist[0] = values[0];
+	for (i = 1; i < nBins; i++){ cumHist[i] = counts[i] + cumHist[i-1]; }
+	
+	//normalize the cumulative histogram
+	normCumHist = newArray(nBins);
+	for (i = 0; i < nBins; i++){  normCumHist[i] = cumHist[i]/
+	cumHist[nBins-1]; }
+		
+	// find the 1th percentile (= 0.01)
+	target = 0.25;
+	i = 0;
+	do {
+	        i = i + 1;
+	        // print("i=" + i + "  value=" + values[i] +  "  count=" + counts[i] + "cumHist= " + cumHist[i] + "  normCumHist= " + normCumHist[i] );
+	} while (normCumHist[i] < target)
+	mi = values[i];
+	print("25th percentile has value " + mi);
+	
+	// find the 99.85th percentile (= 0.998)
+	target = 0.65;
+	i = 0;
+	do {
+	        i = i + 1;
+	        // print("i=" + i + "  value=" + values[i] +  "  count=" + counts[i] + "cumHist= " + cumHist[i] + "  normCumHist= " + normCumHist[i] );
+	} while (normCumHist[i] < target)
+	ma = values[i];
+	print("65th percentile has value " + ma);
+	
+	
+}
+percentile_normalization();
+
+//END MACRO
+// To Do: 
+// Find Maxima
+// Simple Segmentation or from find Maxima
+// 3D Manager or Measure function
+// Get an array
+//Get percentiles like this

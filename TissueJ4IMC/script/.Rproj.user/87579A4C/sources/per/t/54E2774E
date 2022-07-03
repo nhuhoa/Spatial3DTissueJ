@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1656095376439.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "727203665",
+    "id" : "54E2774E",
+    "lastKnownWriteTime" : 1656095361,
+    "last_content_update" : 1656095361,
+    "path" : "~/Documents/storage_tmp/IMC/XP1487_IMCpipeline/script/S2_markers_binarization/binarization_NUC_raw.log",
+    "project_path" : "S2_markers_binarization/binarization_NUC_raw.log",
+    "properties" : {
+        "cursorPosition" : "529,39",
+        "scrollLine" : "514"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "text"
+}

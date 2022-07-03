@@ -1,0 +1,114 @@
+//dir=getDirectory("mouse");
+//print(dir)
+setBatchMode(true);
+print("___________________________________________");
+
+suffixe=".tiff"; // change this setting if your image ends with .tiff
+dir = getArgument;
+//dir = "myIMCdir/XP1487/testing/XP1487_IMCpipeline/raw/";  // for testing purpose
+if (dir=="") 
+	exit ("No argument!");
+
+print("Working dir: "+dir+"\n");
+main_dir=File.getParent(dir)+"/";
+print("Main dir: "+main_dir+"\n");
+
+results_dir=main_dir+"raw/";
+if(!File.exists(results_dir)) 
+      File.mkdir(results_dir);
+
+print("Creating results dir: "+results_dir+"\n");
+
+
+files=getFileList(dir);
+
+print("Number of files in this folder: "+files.length+"\n");
+start = getTime();
+
+for(f=0;f<files.length;f++)
+{
+     if(!File.isDirectory(dir+files[f])) {
+				name=files[f];
+				
+				if(endsWith(name,suffixe)){
+				  print("_______________________________________\n");
+					short_name = substring(name,0,lastIndexOf(name,suffixe));  
+					short_name1 = replace(short_name, " ", "_");
+					print("Processing file: "+short_name);
+					marker_dir=results_dir+short_name1+"_CHANNELS/";
+					nuc_dir=results_dir+short_name1+"_NUC/";
+          if(!File.exists(marker_dir)) 
+            File.mkdir(marker_dir);
+          if(!File.exists(nuc_dir)) 
+            File.mkdir(nuc_dir);
+          background_dir=marker_dir+"BK/";
+          if(!File.exists(background_dir)) 
+            File.mkdir(background_dir);
+          print("Creating a folder for marker splitted images: "+marker_dir+"\n");
+					
+					
+					print("Loading image: "+name);
+					open(dir+name);
+					nb_slices = nSlices;
+					print("Number of channels in this stack image: "+nb_slices);
+					run("Stack to Images");
+					for(s=1;s<=3;s++){ // background quality control channels
+					    selectWindow(short_name+"-000"+s);
+					    run("Grays");
+					    run("Enhance Contrast", "saturated=0.35");
+					    if (bitDepth > 8) {run("8-bit");}
+					    saveAs("Tiff",background_dir+"BK0"+s+".tif");	
+					    //close();
+					}
+					for(s=4;s<=(nb_slices-3);s++){  // marker channels
+					  if(s<10){
+					    cn="0"+s;
+					  }else{
+					    cn=""+s;
+					  }
+					  selectWindow(short_name+"-00"+cn);
+					  run("Grays");
+					  run("Enhance Contrast", "saturated=0.35");
+					  if (bitDepth > 8) {run("8-bit");}
+					  saveAs("Tiff",marker_dir+"C"+cn+".tif");	
+					  //close();
+					}
+					// two NUC channels, one raw and one normalized. Quite similar quality, you can choose channel 18 I think, well if I well remember. We look into the details later. 
+					selectWindow(short_name+"-00"+(nb_slices-2));
+					run("Grays");
+					saveAs("Tiff",nuc_dir+"N"+(nb_slices-2)+"_NUC.tif");
+					selectWindow(short_name+"-00"+(nb_slices-1));
+					run("Grays");
+					run("Enhance Contrast", "saturated=0.35");
+					if (bitDepth > 8) {run("8-bit");}
+					saveAs("Tiff",nuc_dir+"N"+(nb_slices-1)+"_NUC.tif");
+					run("Grays");
+					run("Enhance Contrast", "saturated=0.35");
+					if (bitDepth > 8) {run("8-bit");}
+					selectWindow(short_name+"-00"+nb_slices);
+					run("Grays");
+					run("Enhance Contrast", "saturated=0.35");
+					if (bitDepth > 8) {run("8-bit");}
+					saveAs("Tiff",background_dir+"BK"+nb_slices+".tif");
+					run("Close All"); 
+
+					
+					
+           }
+           
+    }
+
+}
+print("Time of execution is: "+(getTime()-start)/1000); 
+print("Hura, completed!!!");
+
+//if(!File.exists(dir+"log")) File.mkdir(dir+"log");
+//selectWindow("Log");
+//saveAs("Text", dir+ "segment_log.txt");
+setBatchMode(false);
+
+
+
+
+
+

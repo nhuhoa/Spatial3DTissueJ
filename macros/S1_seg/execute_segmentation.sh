@@ -3,14 +3,14 @@
 # batch macro input_filename
 # Ref: page 20: https://imagej.nih.gov/ij/docs/macro_reference_guide.pdf
 
-## Configuration MacOS
-imagej_dir="/Applications/ImageJ.app" ## MacOS ImageJ java run folder
-macro_dir="/Users/hoatran/Documents/BCCRC_projects/IMC/imc_pipeline/quality_control_pipeline/XP1487_IMCpipeline/script/"
-project_dir="/Users/hoatran/Documents/BCCRC_projects/IMC/XP1487/testing/XP1487_IMCpipeline/"
+## Configuration
+macro_dir="/Users/hoatran/Documents/python_workspace/Spatial3DTissueJ/macros/"
+project_dir="/Users/hoatran/Documents/python_workspace/Spatial3DTissueJ/testing_images/"
 
-series="raw/220202_Cambridge_142309_PreStained_s0_a1_ac.ome_rawdata_NUC/" 
+sub_folder="filtered/" 
 task="NUC_SEG" # Nuc segmentation
 
+## ImageJ app directory in your local computer
 ## ImageJ/ Fiji can be installed to Applications, or put into any folder in your drive. 
 imagej_dir="/Applications/ImageJ.app" ## MacOS ImageJ java run folder
 # imagej_dir="/Applications/Fiji.app" ## MacOS Fiji java run folder
@@ -29,11 +29,11 @@ log_file="${macro_dir}S1_seg/${task}.log"
 echo $log_file
 exec >> $log_file 2>&1 && tail $log_file
 
-input_dir="${project_dir}${series}"
+input_dir="${project_dir}${sub_folder}"
 echo "__________________________________\n"
 echo "Input directory is: \n"
 echo $input_dir
-echo "Segment images \n"
+echo "Segment nucleus images \n"
 ## You can change memory amount, ex: 20000m to 30000m so program will run faster.
 ## MacOS background mode here
 

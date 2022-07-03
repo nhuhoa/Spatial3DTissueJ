@@ -1,0 +1,83 @@
+//// Noted: Index Value in output Image : UNLABELED = 0, DELTA = 1, BETA = 2, ALPHA = 3
+//dir=getDirectory("mouse");
+//print(dir)
+setBatchMode(true);
+print("___________________________________________");
+
+suffixe=".tif"; // change this setting if your image ends with .tiff
+dir = getArgument;
+//dir = "myIMCdir/XP1487/testing/XP1487_IMCpipeline/raw/";  // for testing purpose
+if (dir=="") 
+	exit ("No argument!");
+
+print("Working dir: "+dir+"\n");
+main_dir=File.getParent(dir)+"/";
+print("Main dir: "+main_dir+"\n");
+
+results_dir=main_dir+"cell_type/";
+if(!File.exists(results_dir)) 
+      File.mkdir(results_dir);
+
+print("Creating results folder: "+results_dir+"\n");
+
+
+files=getFileList(dir);
+
+print("Number of files in this folder: "+files.length+"\n");
+start = getTime();
+
+for(f=0;f<files.length;f++)
+{
+     if(!File.isDirectory(dir+files[f])) {
+				name=files[f];
+				
+				if(endsWith(name,suffixe)){
+				  print("_______________________________________\n");
+					short_name = substring(name,0,lastIndexOf(name,suffixe));  
+					short_name1 = replace(short_name, " ", "_"); // avoid bugs from naming issue
+					
+					print("Loading image: "+short_name);
+					open(dir+name);
+					//selectWindow(name);
+					rename(short_name1);
+					
+					
+open("C1-delta.tif");
+open("C2-beta.tif");
+open("C3-alpha.tif");
+run("SLIC 3D CLUSTERING", "image_1=C1-delta.tif image_2=C2-beta.tif image_3=C3-alpha.tif image_4=*None* min_size=50 max_size=250 nb_iterations=10");
+run("SLIC 3D 3 CHANNELS", "m1_img=C1-delta.tif m2_img=C2-beta.tif m3_image=C3-alpha.tif slic_label=label.tif threshold=1");
+open("seg/dapi-seg-wat.tif");
+open("seg/dapi-seg.tif");
+run("CELL TYPE DETECTION", "slic=composite_label.tif watershed=dapi-seg-wat.tif nuclei=dapi-seg.tif region=[WATERSHED REGION] percent_marker=0.15 min_distance=0 max_distance_inside=1 max_distance_outside=3.000 save");
+selectWindow("TYPE_WAT");
+//run("Brightness/Contrast...");
+selectWindow("TYPE_NUC");
+selectWindow("Unlabelled");
+selectWindow("dapi-seg.tif");
+run("Enhance Contrast", "saturated=0.35");
+selectWindow("dapi-seg-wat.tif");
+
+close();
+					run("Close All"); 
+
+					
+					
+           }
+           
+    }
+
+}
+print("Time of execution is: "+(getTime()-start)/1000); 
+print("Hura, pre-filtering is completed!!!");
+
+//if(!File.exists(dir+"log")) File.mkdir(dir+"log");
+//selectWindow("Log");
+//saveAs("Text", dir+ "segment_log.txt");
+setBatchMode(false);
+
+
+
+
+
+

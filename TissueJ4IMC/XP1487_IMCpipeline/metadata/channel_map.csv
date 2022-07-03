@@ -1,0 +1,21 @@
+,Name,Channel,fluor,Predicted localization,Cell pheno
+0,Plasma(ArAr80Di),0,ArAr80,,
+1,Xe_contam(Xe131Di),1,Xe131,,
+2,Ceiling_contam(Ba138Di),2,Ba138,,
+3,CD34(Pr141Di),3,Pr141,Plasma membrane,Endothelial
+4,Cavolin(Nd142Di),4,Nd142,Plasma membrane,
+5,Vimentin(Nd143Di),5,Nd143,Intracellular,
+6,aSMA(Nd148Di),6,Nd148,Intracellular,
+7,Fibronectin(Nd150Di),7,Nd150,Extracellular,
+8,CD206(Eu153Di),8,Eu153,Plasma membrane,Macrophage
+9,TERR-119(Gd155Di),9,Gd155,Plasma membrane,RBC
+10,CD31(Dy162Di),10,Dy162,Plasma membrane,Endothelial
+11,Collagen(Ho165Di),11,Ho165,Extracellular,
+12,CA9(Er166Di),12,Er166,Plasma membrane,Tumour
+13,Lyve-1(Tm169Di),13,Tm169,Plasma membrane,Endothelial
+14,pS6(Er170Di),14,Er170,Ribosome,
+15,Thbs1(Yb172Di),15,Yb172,Extracellular,
+16,BCKG(BCKG190Di),16,BCKG190,,
+17,DNA1(Ir191Di),17,Ir191,Nucleus,
+18,DNA2(Ir193Di),18,Ir193,Nucleus,
+19,glass_ablation(Pb208Di),19,Pb208,,
