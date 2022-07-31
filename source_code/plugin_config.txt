@@ -1,0 +1,28 @@
+Plugins>Spatial3DTissueJ,"-"
+Plugins>Spatial3DTissueJ,"COMPARE DETECTION",mcib_testing.Evaluation.CompareDetection_
+Plugins>Spatial3DTissueJ,"-"
+Plugins>Spatial3DTissueJ,"-"
+Plugins>Spatial3DTissueJ,"NUCLEI SEGMENTATION",mcib_testing.Segmentation.NucleiSegmentation_
+Plugins>Spatial3DTissueJ,"-"
+Plugins>Spatial3DTissueJ,"PRE-FILTERING",mcib_testing.Segmentation.Pre_Filtering_V2
+Plugins>Spatial3DTissueJ,"NORMALISE IMAGE",mcib_testing.SLIC.Normalise_Imgs_
+Plugins>Spatial3DTissueJ,"-"
+Plugins>Spatial3DTissueJ,"SLIC 3D CLUSTERING",mcib_testing.SLIC.SLIC3D_
+Plugins>Spatial3DTissueJ,"SLIC 3D 3 CHANNELS",mcib_testing.SLIC.SLIC3D_3channels_V2
+Plugins>Spatial3DTissueJ,"-"
+Plugins>Spatial3DTissueJ,"CELL ZONE",mcib_testing.Segmentation.WatershedSegmentation_
+Plugins>Spatial3DTissueJ,"CELL TYPE DETECTION",mcib_testing.CellType.DetectCellType_V2
+Plugins>Spatial3DTissueJ,"-"
+Plugins>Spatial3DTissueJ,"CELL PROFILES ISLET",mcib_testing.CellType.CellProfiles_Islet_
+Plugins>Spatial3DTissueJ,"-"
+Plugins>Spatial3DTissueJ,"-"
+Plugins>Spatial3DTissueJ,"CELL PROFILES",mcib_testing.CellType.MarkersCoverage_IMC_
+Plugins>Spatial3DTissueJ,"-"
+Plugins>Spatial3DTissueJ,"CELLS INTERACTION ANALYSIS",mcib_testing.organisation.CellularInteractionAnalysis_
+Plugins>Spatial3DTissueJ,"LAYER CONTACT",mcib_testing.organisation.LayerContactAnalysis_V2
+Plugins>Spatial3DTissueJ,"-"
+Plugins>Spatial3DTissueJ,"RANDOM DISTRIBUTION",mcib_testing.organisation.RandomDistribution_V2
+Plugins>Spatial3DTissueJ,"-"
+Plugins>Spatial3DTissueJ,"CLUSTERS ANALYSIS",mcib_testing.organisation.ClusterAnalysis_V2
+Plugins>Spatial3DTissueJ,"SPATIAL STATISTIC",mcib_testing.organisation.SpatialStatistic_V2
+
